@@ -1,0 +1,9 @@
+Project Submission
+
+* Ensure you've passed all the unit tests.
+* Ensure you pass all points on the rubric.
+* When you're done with the project, please submit the following in a zip file.
+	* helper.py
+	* main.py
+	* project_tests.py
+	* Newest inference images from runs folder (all images from the most recent run)
