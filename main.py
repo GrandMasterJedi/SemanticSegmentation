@@ -20,14 +20,14 @@ else:
 
 # Define global parameters
 L2REG = 1e-3
-EPOCHS = 30
-BATCH_SIZE = 2
+EPOCHS = 20
+BATCH_SIZE = 3
 KEEP_PROB = 0.5
 LEARNING_RATE = 1e-4
 
 NUM_CLASSES = 2 # road and no road classification
 IMAGE_SHAPE = (160, 576)  # KITTI dataset uses 160x576 images
-data_dir = '/data'
+data_dir = './data'
 runs_dir = './runs'
 
 
@@ -207,9 +207,9 @@ def run():
         train_nn(sess, EPOCHS, BATCH_SIZE, get_batches_fn, train_op, cross_entropy_loss, input_image, label, keep_prob, learning_rate)
 
         # Safe the trained model
-        print("Saving the trained model...")
-        saver = tf.train.Saver()
-        saver.save(sess, './runs/TrainedModel.ckpt')
+        #print("Saving the trained model...")
+        #saver = tf.train.Saver()
+        #saver.save(sess, './runs/TrainedModel.ckpt')
 
         # Save inference data using helper.save_inference_samples
         print("Save inference samples...")
